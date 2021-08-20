@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  // colors used in the project;
+
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+  }
+
+  h3 {
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #374a5e;
+  }
+
+  p {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #33475b;
+  }
+}

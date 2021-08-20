@@ -15,12 +15,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     SyncPageComponent,
     SyncButtonComponent,
     SyncColumnComponent,
-    DropdownComponent
+    DropdownComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
