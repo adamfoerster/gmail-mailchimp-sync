@@ -1,1 +1,33 @@
-<p>dropdown works!</p>
+<div id="dropdown">
+  <div class="line" (click)="toggleGroups()">
+    <div class="checkbox"><img src="/assets/check.png" /></div>
+    <div class="name">All contacts</div>
+    <div class="arrow"><img src="/assets/arrow.png" /></div>
+  </div>
+  <div class="list" *ngIf="showGroups">
+    <div class="line">
+      <div class="checkbox"><img src="/assets/box.png" /></div>
+      <div class="name">All contacts</div>
+    </div>
+    <div class="line">
+      <div class="checkbox"><img src="/assets/checked-box.png" /></div>
+      <div class="name">Work friends</div>
+    </div>
+    <div class="line">
+      <div class="checkbox"><img src="/assets/box.png" /></div>
+      <div class="name">Work enemies</div>
+    </div>
+    <div class="line">
+      <div class="checkbox"><img src="/assets/box.png" /></div>
+      <div class="name">Family</div>
+    </div>
+    <div class="line">
+      <div class="checkbox"><img src="/assets/box.png" /></div>
+      <div class="name">Pilates class</div>
+    </div>
+    <div class="line">
+      <div class="checkbox"><img src="/assets/box.png" /></div>
+      <div class="name">Pilates class</div>
+    </div>
+  </div>
+</div>

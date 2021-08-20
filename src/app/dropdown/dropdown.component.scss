@@ -1,0 +1,37 @@
+#dropdown {
+  width: 217px;
+  border: 1px solid #cbd6e2;
+  background-color: #f5f8fa;
+  box-sizing: border-box;
+  margin-top: 10px;
+  cursor: pointer;
+  .list {
+    max-height: 155px;
+    overflow-y: auto;
+  }
+  .line {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .checkbox {
+    width: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+  }
+  .name {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #33475b;
+    margin: 10px;
+    flex-grow: 1;
+  }
+  .arrow {
+    margin: 12px;
+  }
+}

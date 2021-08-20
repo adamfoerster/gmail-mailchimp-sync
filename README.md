@@ -1,3 +1,17 @@
+# Trio Test
+
+## Layout positioning
+
+The prototype shows the layout off-center, somewhat close to the top, but that looks like a limitation in figma that prevents vertical alignment rather than a design decision. So I made it centered in the screen.
+
+## Folder organization
+
+Usualy I organize the project in the way recommended in the Angular Docs (domain based, with folders for every module plus `core` and `shared` modules) as oposed to a type based structure (with `components` and `services` folders). But since this is such a small project I believe even that would be an overkill and could be considered overengineering.
+
+## CSS Variables
+
+Even though I chose to use SCSS I used CSS Variables to store values. I did that because CSS Variables are avaliable in every major browser and allow me to change them live. I still used SCSS because I believe it's easier to follow it's structure with nested elements, better reflecting the html structure. That being said I tried to keep both html and css nesting to a minimum.
+
 # GmailMailchimpSync
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.

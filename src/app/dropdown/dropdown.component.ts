@@ -7,10 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
   @Input() groups = [];
+  showGroups = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleGroups() {
+    this.showGroups = !this.showGroups;
   }
 
 }

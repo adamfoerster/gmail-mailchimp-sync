@@ -1,4 +1,5 @@
-<div id="sync">
+<div id="sync" (click)="toggleSync()" class="{{ synced ? 'synced' : '' }}">
   <img src="/assets/sync.png" />
-  <p>Sync Contacts</p>
+  <p *ngIf="!synced">Sync Contacts</p>
+  <p *ngIf="synced">All done!</p>
 </div>

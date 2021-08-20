@@ -1,5 +1,6 @@
 #sync {
-  margin: 0 20px;
+  margin: 65px 30px;
+  cursor: pointer;
   p {
     font-family: Noto Sans;
     font-style: normal;
@@ -7,7 +8,12 @@
     font-size: 18px;
     line-height: 25px;
     text-align: center;
-
     color: #374a5e;
   }
+}
+.synced img {
+  transform: rotate(-180deg);
+}
+.unsynced {
+  transform: rotate(0deg);
 }
