@@ -7,6 +7,7 @@ import { SyncPageComponent } from './sync-page/sync-page.component';
 import { SyncButtonComponent } from './sync-button/sync-button.component';
 import { SyncColumnComponent } from './sync-column/sync-column.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     SyncColumnComponent,
     DropdownComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
