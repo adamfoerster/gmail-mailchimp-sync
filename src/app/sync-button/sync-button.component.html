@@ -1,5 +1,9 @@
 <div id="sync" (click)="toggleSync()" ngClass="{ 'synced' ? synced }">
-  <img [@rotate]="synced ? 'synced' : 'unsynced'" src="/assets/sync.png" />
+  <img
+    [@rotate]="synced ? 'synced' : 'unsynced'"
+    src="/assets/sync.png"
+    alt="sync button"
+  />
   <p *ngIf="!synced" @fadeOut>Sync Contacts</p>
   <p *ngIf="synced" @fadeOut>All done!</p>
 </div>

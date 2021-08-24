@@ -3,7 +3,7 @@
     <div class="checkbox"><img src="/assets/check.png" /></div>
     <div class="name">All contacts</div>
     <div class="arrow" [@dropdown]="showGroups ? 'arrowdown' : 'arrowup'">
-      <img src="/assets/arrow.png" />
+      <img src="/assets/arrow.png" alt="arrow" />
     </div>
   </div>
   <div
@@ -13,9 +13,18 @@
   >
     <div [ngClass]="{ checked: allChecked, line: true }" (click)="checkAll()">
       <div class="checkbox">
-        <img *ngIf="allChecked" src="/assets/checked-box.png" />
-        <img *ngIf="allChecked" src="/assets/checked-check.png" class="thick" />
-        <img *ngIf="!allChecked" src="/assets/box.png" />
+        <img
+          *ngIf="allChecked"
+          src="/assets/checked-box.png"
+          alt="checked box"
+        />
+        <img
+          *ngIf="allChecked"
+          src="/assets/checked-check.png"
+          class="thick"
+          alt="check"
+        />
+        <img *ngIf="!allChecked" src="/assets/box.png" alt="box" />
       </div>
       <div class="name">All contacts</div>
     </div>
@@ -25,13 +34,18 @@
       (click)="toggleGroup(group)"
     >
       <div class="checkbox">
-        <img *ngIf="group.checked" src="/assets/checked-box.png" />
+        <img
+          *ngIf="group.checked"
+          src="/assets/checked-box.png"
+          alt="checked box"
+        />
         <img
           *ngIf="group.checked"
           src="/assets/checked-check.png"
           class="thick"
+          alt="check"
         />
-        <img *ngIf="!group.checked" src="/assets/box.png" />
+        <img *ngIf="!group.checked" src="/assets/box.png" alt="box" />
       </div>
       <div class="name">{{ group.name }}</div>
     </div>
