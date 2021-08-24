@@ -1,6 +1,6 @@
 <div id="sync-column">
-  <img src="/assets/{{source}}.png">
+  <img src="/assets/{{ source }}.png" />
   <h3>{{ source }}</h3>
   <p>These {{ source }} contacts will sync to {{ destination }}</p>
-  <gms-dropdown (groups)="groups"></gms-dropdown>
+  <gms-dropdown [groups]="groups"></gms-dropdown>
 </div>

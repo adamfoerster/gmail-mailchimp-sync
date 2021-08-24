@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataGroup } from '../types';
 
 @Component({
   selector: 'gms-sync-column',
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SyncColumnComponent implements OnInit {
   @Input() source = '';
   @Input() destination = '';
-  @Input() groups = [];
+  @Input() groups: DataGroup[] = [];
 
   constructor() {}
 
