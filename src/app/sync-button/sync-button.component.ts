@@ -14,7 +14,7 @@ import { StateService } from '../state.service';
   styleUrls: ['./sync-button.component.scss'],
   animations: [
     trigger('rotate', [
-      state('synced', style({ transform: 'rotate(180deg)' })),
+      state('synced', style({ transform: 'rotate(179deg)' })),
       state('unsynced', style({ transform: 'rotate(0deg)' })),
       transition('synced <=> unsynced', animate('200ms ease-in-out')),
     ]),
