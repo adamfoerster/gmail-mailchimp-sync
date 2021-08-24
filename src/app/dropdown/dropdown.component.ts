@@ -5,8 +5,8 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
-import { DataGroup } from '../types';
+import { Component, Input } from '@angular/core';
+import { IDataGroup } from '../types';
 
 @Component({
   selector: 'gms-dropdown',
@@ -25,20 +25,18 @@ import { DataGroup } from '../types';
     ]),
   ],
 })
-export class DropdownComponent implements OnInit {
-  @Input() groups: DataGroup[] = [];
+export class DropdownComponent {
+  @Input() groups: IDataGroup[] = [];
   showGroups = false;
   allChecked = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
-
   toggleGroups() {
     this.showGroups = !this.showGroups;
   }
 
-  toggleGroup(group: DataGroup) {
+  toggleGroup(group: IDataGroup) {
     this.groups = this.groups.map((g) => {
       if (g === group) {
         g.checked = !g.checked;

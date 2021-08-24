@@ -1,7 +1,7 @@
 #dropdown {
   width: 217px;
-  border: 1px solid #cbd6e2;
-  background-color: #f5f8fa;
+  border: 1px solid var(--light-blue);
+  background-color: var(--gray);
   box-sizing: border-box;
   margin-top: 10px;
   cursor: pointer;
@@ -30,7 +30,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #33475b;
+    color: var(--dark-blue);
     margin: 10px;
     flex-grow: 1;
   }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { BackgroundComponent } from './background/background.component';
 import { SyncPageComponent } from './sync-page/sync-page.component';
 import { SyncButtonComponent } from './sync-button/sync-button.component';
 import { SyncColumnComponent } from './sync-column/sync-column.component';
@@ -12,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundComponent,
     SyncPageComponent,
     SyncButtonComponent,
     SyncColumnComponent,

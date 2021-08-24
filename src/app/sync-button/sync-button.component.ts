@@ -5,7 +5,8 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'gms-sync-button',
@@ -25,13 +26,14 @@ import { Component, OnInit } from '@angular/core';
     ]),
   ],
 })
-export class SyncButtonComponent implements OnInit {
+export class SyncButtonComponent {
   synced = false;
-  constructor() {}
-
-  ngOnInit(): void {}
+  constructor(public state: StateService) {}
 
   toggleSync() {
     this.synced = !this.synced;
+    if (this.synced) {
+      this.state.syncContacts();
+    }
   }
 }

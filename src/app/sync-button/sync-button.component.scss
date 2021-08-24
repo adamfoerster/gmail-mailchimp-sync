@@ -2,12 +2,11 @@
   margin: 65px 30px;
   cursor: pointer;
   p {
-    font-family: Noto Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
-    color: #374a5e;
+    color: var(--medium-blue);
   }
 }

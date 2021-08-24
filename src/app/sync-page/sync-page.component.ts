@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataGroup } from '../types';
+import { StateService } from '../state.service';
+import { IDataGroup } from '../types';
 
 @Component({
   selector: 'gms-sync-page',
@@ -7,37 +8,29 @@ import { DataGroup } from '../types';
   styleUrls: ['./sync-page.component.scss'],
 })
 export class SyncPageComponent implements OnInit {
-  destinationGroups: DataGroup[] = [
-    {
-      id: 'family',
-      name: 'Family',
-      checked: false,
-    },
-    {
-      id: 'workfriends',
-      name: 'Work Friends',
-      checked: false,
-    },
-    {
-      id: 'workenemies',
-      name: 'Work Enemies',
-      checked: false,
-    },
-    {
-      id: 'another',
-      name: 'Another Label',
-      checked: false,
-    },
-  ];
-  sourceGroups: DataGroup[] = [
-    {
-      id: 'church',
-      name: 'Church',
-      checked: false,
-    },
-  ];
+  destinationGroups: IDataGroup[] = [];
+  sourceGroups: IDataGroup[] = [];
+  destinationName = '';
+  destinationIcon = '';
+  sourceName = '';
+  sourceIcon = '';
 
-  constructor() {}
+  constructor(public state: StateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.state.destinationGroups$.subscribe(
+      (groups) => (this.destinationGroups = groups)
+    );
+    this.state.originGroups$.subscribe(
+      (groups) => (this.sourceGroups = groups)
+    );
+    this.state.destinationMetadata$.subscribe((metadata) => {
+      this.destinationName = metadata.name;
+      this.destinationIcon = metadata.icon;
+    });
+    this.state.originMetadata$.subscribe((metadata) => {
+      this.sourceName = metadata.name;
+      this.sourceIcon = metadata.icon;
+    });
+  }
 }

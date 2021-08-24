@@ -1,13 +1,15 @@
 <div id="page">
   <gms-sync-column
-    source="Gmail"
-    destination="Mailchimp"
+    [source]="sourceName"
+    [destination]="destinationName"
+    [icon]="sourceIcon"
     [groups]="destinationGroups"
   ></gms-sync-column>
   <gms-sync-button></gms-sync-button>
   <gms-sync-column
-    source="Mailchimp"
-    destination="Gmail"
+    [source]="destinationName"
+    [destination]="sourceName"
+    [icon]="destinationIcon"
     [groups]="sourceGroups"
   ></gms-sync-column>
 </div>

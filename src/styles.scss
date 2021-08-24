@@ -1,10 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+// colors used in the project;
+:root {
+  --light-blue: #cbd6e2;
+  --gray: #f5f8fa;
+  --dark-blue: #33475b;
+  --medium-blue: #374a5e;
+  --secondary-gray: #DFE3EB;
+}
+
 html {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
 
-  // colors used in the project;
+
 
   body {
     padding: 0;
